@@ -1,22 +1,45 @@
-let instance = null;
-
-class Singletone {
+const Singletone = (function () {
 	
-	constructor() {
-		if (!instance) {
-			instance = this;
-		}
-		this.time = new Date();
+	let instance;
+	
+	function init() {
 		
-		return instance;
+		let privateCounter = 0;
+		
+		return {
+			publicMethod: function () {
+				console.log('public method')
+			},
+			increment: function () {
+				privateCounter++;
+			},
+			getCount: function () {
+				return privateCounter;
+			}
+		}
 		
 	}
+	
+	return {
+		getInstance: function () {
+			if (!instance) {
+				instance = init();
+				return instance
+			} else {
+				return instance;
+			}
+			
+		}
 		
-}
+		
+	};
+	
+})();
 
+let uniqCounter = Singletone.getInstance();
+uniqCounter.increment();
+uniqCounter.increment();
+console.log(uniqCounter.getCount());
 
-
-const singleTone = new Singletone();
-const testSingletone = new Singletone();
-
-console.log(singleTone.time === testSingletone.time);// true object are same
+let secondCounter = Singletone.getInstance();
+console.log(secondCounter.getCount());
