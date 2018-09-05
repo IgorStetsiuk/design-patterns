@@ -22,12 +22,12 @@ Often subsystems get more complex over time. Even applying design patterns often
 
 Create facades to define entry points to each level of a subsystem. If multiple subsystems depend on each other, you can limit the coupling by requiring subsystems to communicate only through facades.
 
-### The bridge design pattern solves problems like:
+### The facade design pattern solves problems like:
 
 + To make a complex subsystem easier to use, a simple interface should be provided for a set of interfaces in the subsystem.
 + The dependencies on a subsystem should be minimized.
 
-### The bridge design pattern describes how to solve such problems:
+### The facade design pattern describes how to solve such problems:
 
 + implements a simple interface in terms of (by delegating to) the interfaces in the subsystem and
 + may perform additional functionality before/after forwarding a request.
