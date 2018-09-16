@@ -8,11 +8,6 @@
    
    
 ### Usage / Applicability
-
-
-### The bridge design pattern solves problems like:
-
-### The bridge design pattern describes how to solve such problems:
     
 ### Real life example
   
