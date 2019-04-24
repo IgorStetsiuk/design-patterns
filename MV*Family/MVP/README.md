@@ -48,3 +48,5 @@ The Presenter is responsible to act as the middle man between View and Model. It
 #### Sources 
  
  [Medium main article](https://medium.com/@rohitkhatana/presenter-first-mvp-using-typescript-javascript-245a4fe041ef)
+ 
+ [http://www.roypeled.com](http://www.roypeled.com/an-mvp-guide-to-javascript-model-view-presenter/)
